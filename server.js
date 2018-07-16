@@ -61,6 +61,8 @@ app.get('/', (req, res) => {
   }// end request object
 );// end app.get
 
+
+
 app.get('/about', (req, res) => {
   //res.send('About Page');
     res.render('about.hbs',{
@@ -68,7 +70,18 @@ app.get('/about', (req, res) => {
       // ,
       // currentYear: new Date().getFullYear()
   });// end render
-});// end get and req fxn
+});// end get and inner fxn param
+
+
+
+app.get('/projects', (req,res) => {
+
+    res.render('projects.hbs', {
+      pageTitle: 'projects page',
+      welcomeMessage: 'Welcome to my portfolio'
+    });
+});// end get and inner fxn param
+
 
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
